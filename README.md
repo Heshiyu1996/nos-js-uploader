@@ -31,7 +31,10 @@ this.uploader = new NosUpLoader(file, nosParam)
 
 ```js
 // 3、Fetch the file-url by its fulfilled-return of Promise
-this.uploader.fetchFileUrl().then(res => console.log(res))
+this.uploader.fetchFileUrl().then(url => {
+    // The use of file-url
+    // ...
+})
 ```
 
 ## 参数说明
@@ -56,6 +59,17 @@ new NosUpLoader(file, nosParam)
         - token
             - 类型：`String`
             - 上传凭证：用户上传到NOS的凭证（从后端获取）
+
+### url
+```js
+this.uploader.fetchFileUrl().then(url => {
+    // The use of file-url
+    // ...
+})
+```
+ - url
+    - 类型：`String`
+    - 描述：NOS上传成功后返回的Url
 
 ## 更新历史
  - v0.1.0 —— 2019-03-21

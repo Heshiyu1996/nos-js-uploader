@@ -36,3 +36,6 @@ this.uploader.fetchFileUrl().then(res => console.log(res))
 
 ## Thanks
 [NOS-JS-SDK](https://www.163yun.com/help/documents/60892166344593408)
+
+## License
+The code is distributed under the [MIT](https://opensource.org/licenses/MIT) license

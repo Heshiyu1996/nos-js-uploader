@@ -3,7 +3,7 @@
  * @version 0.1
  * @author heshiyu
  */
-import NOS_SDK from './core/nos-js-sdk'
+import NOS_SDK from './js/nos-js-sdk'
 
 class NosUpLoader {
     /**

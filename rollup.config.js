@@ -3,9 +3,8 @@ import { eslint } from 'rollup-plugin-eslint'
 import resolve from 'rollup-plugin-node-resolve'
 import commonjs from 'rollup-plugin-commonjs'
 import replace from "rollup-plugin-replace"
-import { uglify } from "rollup-plugin-uglify"
-
-const ENV = process.env.NODE_ENV;
+import uglify from "rollup-plugin-uglify"
+import { minify } from 'uglify-es';
 
 export default {
     input: 'src/nos-uploader.js',
@@ -33,6 +32,16 @@ export default {
             exclude: 'node_modules/**',
             ENV: JSON.stringify(process.env.NODE_ENV)
         }),
-        ENV === "production" && uglify()
-    ],
+        uglify(
+          {
+            compress: {
+              drop_console: true,
+            },
+            mangle: {
+              reserved: ['Event'],
+            }
+          },
+          minify,
+        )
+    ]
 }

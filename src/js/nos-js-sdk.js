@@ -2,7 +2,7 @@ import $ from 'jquery'
 import CryptoJS from 'crypto-js'
 
 function Uploader(options) {
-    ;('use strict')
+    'use strict'
     let defaults = {
         /**
          * 请求协议类型，默认http

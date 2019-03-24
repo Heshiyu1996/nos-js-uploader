@@ -37,8 +37,8 @@ class NosUpLoader {
                     try {
                         let url = `https://${this.param.bucketName}.nos-hz.163yun.com/${this.param.objectName}`
                         resolve(url)
-                    } catch {
-                        reject('error url')
+                    } catch(err) {
+                        reject(err)
                     }
                 })
             )

@@ -1,8 +1,7 @@
-import $ from './jquery'
-import CryptoJS from './crypto-js'
+import $ from 'jquery'
+import CryptoJS from 'crypto-js'
 
 function Uploader(options) {
-    console.log(1999)
     ;('use strict')
     let defaults = {
         /**

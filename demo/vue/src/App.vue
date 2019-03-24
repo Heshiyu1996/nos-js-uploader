@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import NosUpLoader from '@/utils/nos-uploader'
+import NosUpLoader from '@/utils/nos-uploader.min'
 import { getNosToken } from '@/server/api'
 
 export default {
@@ -45,7 +45,7 @@ export default {
         // 实例化一个nosUpLoader
         _fetchFileUrl(file, param) {
             this.uploader = new NosUpLoader(file, param)
-            this.uploader.getFileUrl().then(res => console.log(res))
+            this.uploader.fetchFileUrl().then(res => console.log(res))
         }
     }
 }

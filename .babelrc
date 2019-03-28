@@ -3,7 +3,7 @@
      [
       "@babel/preset-env",
       {
-       "modules": false
+       "modules": false // true的话，Babel会在Rollup处理之前，将我们模块转成CommonJS，导致Rollup的一些处理失败
       }
      ]
     ],

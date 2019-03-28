@@ -1,12 +1,14 @@
 {
   "name": "nos-js-uploader",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": {
     "name": "heshiyu<450979309@qq.com>"
   },
+  "license": "MIT",
   "scripts": {
     "clean": "rimraf dist",
-    "build": "yarn run clean && rollup -c"
+    "start": "yarn run clean && cross-env NODE_ENV=development rollup -w -c scripts/rollup.config.dev.js",
+    "build": "yarn run clean && cross-env NODE_ENV=production rollup -c scripts/rollup.config.prod.js"
   },
   "dependencies": {
     "jquery": "^3.3.1",
@@ -16,13 +18,17 @@
     "@babel/core": "^7.4.0",
     "@babel/preset-env": "^7.4.2",
     "babel-eslint": "^10.0.1",
+    "cross-env": "^5.2.0",
     "rimraf": "^2.6.3",
     "rollup": "^1.7.0",
+    "rollup-plugin-alias": "^1.5.1",
     "rollup-plugin-babel": "^4.3.2",
     "rollup-plugin-commonjs": "^9.2.1",
-    "rollup-plugin-eslint": "^5.1.0",
+    "rollup-plugin-eslint": "^4.0.0",
+    "rollup-plugin-filesize": "^6.0.1",
     "rollup-plugin-node-resolve": "^4.0.1",
     "rollup-plugin-replace": "^2.1.1",
+    "rollup-plugin-serve": "^1.0.1",
     "rollup-plugin-uglify": "^2.0.1",
     "uglify-es": "^3.3.4"
   }

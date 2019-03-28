@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import NosUpLoader from '@/utils/nos-uploader.min'
+import NosUpLoader from './../../../dist/nos-js-uploader.esm.min.js'
 import { getNosToken } from '@/server/api'
 
 export default {

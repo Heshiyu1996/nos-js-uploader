@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import NosUpLoader from '@/utils/nos-uploader.min'
+import NosUpLoader from './../../../dist/nos-js-uploader.esm.min.js'
 import { getNosToken } from '@/server/api'
 
 export default {
@@ -45,7 +45,11 @@ export default {
         // 实例化一个nosUpLoader
         _fetchFileUrl(file, param) {
             this.uploader = new NosUpLoader(file, param)
-            this.uploader.fetchFileUrl().then(res => console.log(res))
+            this.uploader.setFileTypes('jpg') // 设置允许上传的文件类型
+
+            this.uploader.fetchFileUrl()
+            .then(res => console.log(res))
+            .catch(err => console.log(err, 'app.vue of err'))
         }
     }
 }

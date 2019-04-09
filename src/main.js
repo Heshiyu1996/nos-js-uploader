@@ -39,6 +39,7 @@ class NosUpLoader {
 
     setFile(file) {
         this.file = file
+        return this
     }
 
     /**

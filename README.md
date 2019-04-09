@@ -62,9 +62,9 @@ new NosUpLoader(file, nosParam)
 
 ### url
 ```js
-this.uploader.fetchFileUrl().then(url => {
+this.uploader.fetch().then(checks => {
     // The use of file-url
-    // ...
+    let url = checks[2]
 })
 ```
  - url

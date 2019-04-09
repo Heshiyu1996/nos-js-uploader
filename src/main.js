@@ -37,6 +37,11 @@ class NosUpLoader {
         return this.uploader
     }
 
+    setFile(file) {
+        this.file = file
+        return this
+    }
+
     /**
      * @name        设置允许上传的文件类型
      * @augments    fileTypes     | 允许上传的文件类型 | String、Array
@@ -91,7 +96,7 @@ class NosUpLoader {
      * @name        获取NOS返回的URL
      * @returns     Promise     | Promise
      */
-    fetchFileUrl() {
+    fetch() {
         let pFileTypesCheck = this.checkFileTypes(),
             pAddFile = this.addFile(),
             pUploadFile = this.uploadFile(),
